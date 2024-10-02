@@ -1,6 +1,129 @@
-body {
-    all: unset;
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: 'Fruktur Regular';
+    src: url('/font/fruktur_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('/font/inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+    --bg-color: #131011;
+    --theme-color: #ff940f;
+    --text-color: white;
+    --flavor-text-color: #222222;
+    --main-font: 'Inter';
+    --flavor-font: 'Fruktur Regular';
+}
+
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-smooth: always;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+    background-image: url('/img/bg.svg');
+    background-size: 100px;
+}
+
+a {
+    all: unset;
+}
+
+#page_container {
+    display: grid;
+    gap: 0px 0px;
+    height: 100%;
+    grid-template-rows: 6em auto;
+    grid-template-areas: 
+        "topbar"
+        "main";
+
+    background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.9) 100%);
+}
+
+#topbar_container {
+    grid-area: topbar;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    column-gap: 10px;
+}
+
+#hero_container {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 24px;
+
+    width: 100%;
+}
+
+#hero_image {
+    max-width: 56em;
+}
+
+#hero_text {
+    font-size: 5em;
+    text-align: center;
+}
+
+#hero_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-style: solid;
+    margin: 10px;
+    flex-grow: 2;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 32px;
+    border-radius: 50px;
+    font-size: 1.4em;
+    background-color: rgba(0, 0, 0, .2);
+    border-width: 3px;
+    border-style: solid;
+    border-color: var(--theme-color);
+    backdrop-filter: blur(3px);
+}
+
+.lit_button {
+    background-color: var(--theme-color);
+    color: black;
+}
+
+.flavor {
+    font-family: var(--flavor-font), 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--flavor-text-color);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--theme-color);
+}
