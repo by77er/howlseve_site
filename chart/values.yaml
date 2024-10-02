@@ -1,0 +1,6 @@
+image: bitcrush/howlseve_site:0.1.0
+replicaCount: 1
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 500m
