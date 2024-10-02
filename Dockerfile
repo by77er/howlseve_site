@@ -5,10 +5,9 @@ COPY . /build/
 RUN cd /build \
   && apk add fuse3 ca-certificates sqlite gcc build-base \
   && gleam export erlang-shipment \
-  && mv build/erlang-shipment /app \
-  && mv priv /app \
-  && rm -r /build \
-  && apk del gcc build-base
+  && mv build/erlang-shipment /app
+
+COPY priv /app/priv
 
 FROM ghcr.io/gleam-lang/gleam:v1.5.1-erlang-alpine AS runner
 
