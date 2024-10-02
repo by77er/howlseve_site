@@ -12,7 +12,6 @@
     font-style: normal;
 }
 
-
 :root {
     --bg-color: #131011;
     --theme-color: #ff940f;
@@ -22,7 +21,6 @@
     --flavor-font: 'Fruktur Regular';
 }
 
-
 html, body {
     margin: 0;
     height: 100%;
@@ -30,37 +28,64 @@ html, body {
 
 body {
     font-smooth: always;
-    background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+
     background-image: url('/img/bg.svg');
     background-size: 100px;
+    z-index: -2;
 }
 
 a {
     all: unset;
 }
 
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+em {
+    all: unset;
+    color: var(--theme-color);
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 #page_container {
-    display: grid;
     gap: 0px 0px;
     height: 100%;
-    grid-template-rows: 6em auto;
-    grid-template-areas: 
-        "topbar"
-        "main";
-
-    background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.9) 100%);
 }
 
 #topbar_container {
+    position: fixed;
+    top: 12px;
+    width: 100vw;
     grid-area: topbar;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
-    column-gap: 10px;
+    gap: 10px;
 }
 
 #hero_container {
@@ -72,6 +97,9 @@ a {
     row-gap: 24px;
 
     width: 100%;
+    height: 100vh;
+
+    animation: fadein .5s;
 }
 
 #hero_image {
@@ -79,15 +107,110 @@ a {
 }
 
 #hero_text {
-    font-size: 5em;
+    font-size: min(8vw, 5em);
+    -webkit-text-stroke-width: min(.3vw, 3px);
     text-align: center;
 }
 
-#hero_links {
+#hero_subtext {
+    font-size: min(6vw, 3em);
+    font-style: italic;
+    text-align: center;
+}
+
+#hero_scrolldown {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    color: rgba(255, 255, 255, 0.25);
+    animation: bounce 3s infinite, fadein 5s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+#hero_down_arrow {
+    position: relative;
+    height: 50px;
+}
+
+.content {
+    width: 100%;
+    height: fit-content;
+    padding: 24px 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.content div {
+    width: 95%;
+    max-width: 1000px;
+    flex-grow: 2;
+}
+
+.end_block {
+    background-color: var(--bg-color);
+}
+
+.end_block {
+    color: lightgray;
+}
+
+.end_block h1 {
+    font-weight: bold;
+    color: var(--theme-color);
+}
+
+.end_block h2 {
+    font-weight: bold;
+    color: white;
+}
+
+#tfclink {
+    color: #57F5D9;
+    font-weight: bold;
+}
+
+#tfclink:hover {
+    cursor: pointer;
+}
+
+#linkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;    
+}
+
+#linkbox a {
+    color: var(--theme-color);
+    font-size: 1.2em;
+}
+
+#gradient {
+    position: fixed;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.9) 100%);
+    height: 100%;
+    width: 100%;
 }
 
 .line {

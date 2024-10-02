@@ -2,10 +2,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 712.06 462.61">
   <defs>
     <style>
-      .cls-1 {
-        filter: url(#drop-shadow-10);
-      }
-
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13 {
         fill: #231f20;
         stroke: #FF940F;
@@ -17,18 +13,6 @@
         fill: #FF940F;
       }
 
-      .cls-2 {
-        filter: url(#drop-shadow-2);
-      }
-
-      .cls-3 {
-        filter: url(#drop-shadow-3);
-      }
-
-      .cls-4 {
-        filter: url(#drop-shadow-7);
-      }
-
       .cls-15 {
         opacity: .43;
       }
@@ -37,137 +21,10 @@
         display: none;
       }
 
-      .cls-5 {
-        filter: url(#drop-shadow-13);
-      }
-
-      .cls-6 {
-        filter: url(#drop-shadow-8);
-      }
-
-      .cls-7 {
-        filter: url(#drop-shadow-4);
-      }
-
-      .cls-8 {
-        filter: url(#drop-shadow-12);
-      }
-
-      .cls-9 {
-        filter: url(#drop-shadow-5);
-      }
-
-      .cls-10 {
-        filter: url(#drop-shadow-11);
-      }
-
-      .cls-11 {
-        filter: url(#drop-shadow-1);
-      }
-
-      .cls-12 {
-        filter: url(#drop-shadow-9);
-      }
-
-      .cls-13 {
-        filter: url(#drop-shadow-6);
-      }
-
       .cls-17 {
         fill: #FF940F;
       }
     </style>
-    <filter id="drop-shadow-1" x="-359.09" y="65.44" width="301" height="285" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-2" x="32.91" y="1.44" width="195" height="337" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-2" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-2" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-3" x="360.91" y="43.44" width="196" height="233" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-3" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-3" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-4" x="492.91" y="27.44" width="148" height="285" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-4" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-4" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-5" x="556.91" y="13.44" width="70" height="74" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-5" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-5" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-6" x="563.91" y="42.44" width="134" height="157" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-6" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-6" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-7" x="150.91" y="237.44" width="153" height="225" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-7" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-7" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-8" x="254.91" y="318.44" width="45" height="51" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-8" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-8" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-9" x="417.91" y="232.44" width="165" height="221" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-9" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-9" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-10" x="532.91" y="310.44" width="45" height="51" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-10" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-10" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-11" x="279.91" y="241.44" width="173" height="200" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-11" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-11" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-12" x="282.91" y="317.44" width="45" height="52" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-12" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-12" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="drop-shadow-13" x="193.91" y="62.44" width="204" height="195" filterUnits="userSpaceOnUse">
-      <feOffset dx="7" dy="7"/>
-      <feGaussianBlur result="blur-13" stdDeviation="5"/>
-      <feFlood flood-color="#231f20" flood-opacity=".8"/>
-      <feComposite in2="blur-13" operator="in"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
   </defs>
   <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
   <g>

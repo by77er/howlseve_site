@@ -3,9 +3,7 @@ import app/web
 import filepath
 import gleam/dict
 import gleam/erlang/process
-import gleam/io
 import mist
-import simplifile
 import tagg_config
 import wisp
 import wisp/wisp_mist
@@ -35,12 +33,6 @@ pub fn static_directory() -> String {
 }
 
 pub fn main() {
-  case simplifile.current_directory() {
-    Ok(current_dir_path) -> {
-      start_server(current_dir_path)
-    }
-    Error(_) -> {
-      io.println("Failed to get current directory")
-    }
-  }
+  let assert Ok(priv_directory) = wisp.priv_directory("howlseve_site")
+  start_server(priv_directory)
 }

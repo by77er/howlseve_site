@@ -19,7 +19,6 @@ gleam_erlang = "~> 0.23"
 mist = ">= 2.0.0 and < 3.0.0"
 tagg = ">= 1.0.7 and < 2.0.0"
 cx = ">= 1.0.5 and < 2.0.0"
-simplifile = ">= 2.2.0 and < 3.0.0"
 filepath = ">= 1.0.0 and < 2.0.0"
 
 [dev-dependencies]

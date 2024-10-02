@@ -37,6 +37,5 @@ gleam_erlang = { version = "~> 0.23" }
 gleam_stdlib = { version = ">= 0.34.0 and < 2.0.0" }
 gleeunit = { version = ">= 1.0.0 and < 2.0.0" }
 mist = { version = ">= 2.0.0 and < 3.0.0" }
-simplifile = { version = ">= 2.2.0 and < 3.0.0" }
 tagg = { version = ">= 1.0.7 and < 2.0.0" }
 wisp = { version = ">= 1.1.0 and < 2.0.0" }
