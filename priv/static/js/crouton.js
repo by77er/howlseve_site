@@ -10,7 +10,6 @@ const secret = (key, action) => {
             if (key === key_stack) {
                 activated = true;
                 action();
-                
             }
         } else {
             key_stack = "";
@@ -34,4 +33,3 @@ secret("sigma", () => {
         h1.setHTMLUnsafe(base + " Sigma balls.");
     }, 2000);
 });
-

@@ -18,23 +18,29 @@ pub fn handle_request(req: Request, ctx: Context) -> Response {
 }
 
 fn main_page(_req: Request, ctx: Context) -> Response {
-  tagg.render(ctx.tagg, "main_page.html", cx.dict())
-  |> catch_error()
+  catch_error({
+    use hero <- result.try(tagg.render(ctx.tagg, "hero.html", cx.dict()))
+    use about <- result.try(tagg.render(ctx.tagg, "about.html", cx.dict()))
+    use main <- result.try(wrap_content(hero <> about, ctx))
+    Ok(main)
+  })
 }
 
 fn legal_page(_req: Request, ctx: Context) -> Response {
   tagg.render(ctx.tagg, "legal.html", cx.dict())
-  |> result.map(fn(legal) {
-    cx.dict()
-    |> cx.add_string("content", legal)
-    |> tagg.render(ctx.tagg, "shell.html", _)
-  })
+  |> result.map(wrap_content(_, ctx))
   |> result.flatten()
   |> catch_error()
 }
 
 fn telegram(_req: Request) -> Response {
   wisp.redirect("https://t.me/+kDp_-2NZOVY0OThh")
+}
+
+fn wrap_content(content: String, ctx: Context) {
+  cx.dict()
+  |> cx.add_string("content", content)
+  |> tagg.render(ctx.tagg, "shell.html", _)
 }
 
 fn catch_error(result: Result(String, whatever)) -> Response {
