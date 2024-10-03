@@ -1,6 +1,5 @@
 import app/web.{type Context}
 import cx
-import gleam/dynamic
 import gleam/io
 import gleam/result
 import gleam/string_builder
