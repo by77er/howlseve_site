@@ -18,16 +18,8 @@ pub fn handle_request(req: Request, ctx: Context) -> Response {
 }
 
 fn main_page(_req: Request, ctx: Context) -> Response {
-  case tagg.render(ctx.tagg, "main_page.html", cx.dict()) {
-    Ok(html) -> {
-      wisp.ok()
-      |> wisp.html_body(string_builder.from_string(html))
-    }
-    Error(err) -> {
-      io.debug(err)
-      wisp.internal_server_error()
-    }
-  }
+  tagg.render(ctx.tagg, "main_page.html", cx.dict())
+  |> catch_error()
 }
 
 fn legal_page(_req: Request, ctx: Context) -> Response {
