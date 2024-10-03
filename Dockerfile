@@ -7,8 +7,6 @@ RUN cd /build \
   && gleam export erlang-shipment \
   && mv build/erlang-shipment /app
 
-COPY priv /app/priv
-
 FROM ghcr.io/gleam-lang/gleam:v1.5.1-erlang-alpine AS runner
 
 COPY --from=builder /app /app
