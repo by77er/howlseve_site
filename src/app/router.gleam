@@ -12,7 +12,6 @@ pub fn handle_request(req: Request, ctx: Context) -> Response {
   case wisp.path_segments(req) {
     [] -> main_page(req, ctx)
     ["legal"] -> legal_page(req, ctx)
-    ["telegram"] -> telegram(req)
     _ -> wisp.not_found()
   }
 }
@@ -31,10 +30,6 @@ fn legal_page(_req: Request, ctx: Context) -> Response {
   |> result.map(wrap_content(_, ctx))
   |> result.flatten()
   |> catch_error()
-}
-
-fn telegram(_req: Request) -> Response {
-  wisp.redirect("https://t.me/+kDp_-2NZOVY0OThh")
 }
 
 fn wrap_content(content: String, ctx: Context) {
